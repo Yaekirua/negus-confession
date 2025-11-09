@@ -56,13 +56,4 @@ This app can be deployed on Render, Heroku, or VPS. Just set your MySQL connecti
 
 ***
 
-This README gives a good summary, highlights all main features and technologies, and provides setup instructions for new users or contributors.[1][3][8]
 
-[1](https://gist.github.com/Igormandello/57d57ee9a9f32a5414009cbe191db432)
-[2](https://github.com/sanchiitvijay/confetti)
-[3](https://www.freecodecamp.org/news/how-to-structure-your-readme-file/)
-[4](https://dev.to/mr_ali3n/folder-structure-for-nodejs-expressjs-project-435l)
-[5](https://www.youtube.com/watch?v=662nRW9SpUE)
-[6](https://stackoverflow.com/questions/11868512/linking-using-relative-path-on-github-readme-md)
-[7](https://docs.readme.com/main/docs/sending-logs-to-readme-with-nodejs)
-[8](https://github.com/localhost-8000/confess-me)
