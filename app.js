@@ -12,7 +12,7 @@ const io = new Server(server);
 const db = mysql.createConnection({
     host: 'localhost',
     user: 'root',
-    password: 'waja9006',
+    password: 'youPassword',
     database: 'confession_db',
 });
 
