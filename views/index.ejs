@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Uni Confessions</title>
+  <script src="/socket.io/socket.io.js"></script>
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+  <h1>Negus Confessions</h1>
+  <div class="confess-container">
+    <form method="post" action="/confess">
+      <textarea
+        name="message"
+        rows="4"
+        cols="50"
+        placeholder="Your confession..."
+        required
+      ></textarea>
+      <button type="submit">Submit</button>
+    </form>
+  </div>
+
+  <h2>Latest Confessions</h2>
+  <ul id="confessions">
+    <% confessions.forEach(function(item) { %>
+      <li>
+        <%= item.message %>
+        <small>
+          <%= item.created_at.toLocaleString() %>
+        </small>
+      </li>
+    <% }); %>
+  </ul>
+
+  <script>
+  var socket = io();
+  socket.on('newConfession', function() {
+    location.reload();
+  });
+
+  // Listen for Enter in textarea to submit form
+  document.querySelector('textarea').addEventListener('keydown', function(e) {
+    if (e.key === 'Enter' && !e.shiftKey) {
+      e.preventDefault(); // Prevent new line
+      this.form.submit(); // Submit the form
+    }
+  });
+</script>
+
+</body>
+</html>
